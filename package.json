@@ -1,0 +1,40 @@
+{
+  "name": "code-spotlight",
+  "version": "0.1.0",
+  "description": "React components for code spotlight functionality",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rimraf dist",
+    "prepublishOnly": "pnpm run build",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "keywords": [
+    "react",
+    "code",
+    "spotlight",
+    "highlight",
+    "mdx"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.4",
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^8.5.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
